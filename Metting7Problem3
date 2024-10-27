@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Subprogram (void function) to calculate GCD
+void gcdSubprogram(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    cout << "GCD (subprogram): " << a << endl;
+}
+
+// Recursive function to calculate GCD
+int gcdFunction(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return gcdFunction(b, a % b);
+}
+
+int main() {
+    int a = 48;
+    int b = 18;
+
+    // Using subprogram to calculate GCD
+    gcdSubprogram(a, b);  // Output: 6
+
+    // Using recursive function to calculate GCD
+    cout << "GCD (function): " << gcdFunction(a, b) << endl;  // Output: 6
+
+    return 0;
+}

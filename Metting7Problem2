@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// Subprogram (void function) to calculate factorial
+void factorialSubprogram(int x) {
+    int result = 1;
+    for (int i = 1; i <= x; i++) {
+        result *= i;
+    }
+    cout << "Factorial (subprogram): " << result << endl;
+}
+
+// Recursive function to calculate factorial
+int factorialFunction(int x) {
+    if (x == 0 || x == 1)
+        return 1;
+    else
+        return x * factorialFunction(x - 1);
+}
+
+int main() {
+    int x = 5;
+
+    // Using subprogram to calculate factorial
+    factorialSubprogram(x);  // Output: 120
+
+    // Using recursive function to calculate factorial
+    cout << "Factorial (function): " << factorialFunction(x) << endl;  // Output: 120
+
+    return 0;
+}

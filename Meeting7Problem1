@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+// Subprogram (void function) for addition
+void addSubprogram(int a, int b) {
+    cout << "Addition (subprogram): " << a + b << endl;
+}
+
+// Subprogram (void function) for subtraction
+void subtractSubprogram(int a, int b) {
+    cout << "Subtraction (subprogram): " << a - b << endl;
+}
+
+// Function to return the sum of two numbers
+int addFunction(int a, int b) {
+    return a + b;
+}
+
+// Function to return the difference of two numbers
+int subtractFunction(int a, int b) {
+    return a - b;
+}
+
+int main() {
+    int a = 10, b = 5;
+
+    // Using subprograms
+    addSubprogram(a, b);          // Output: 15
+    subtractSubprogram(a, b);     // Output: 5
+
+    // Using functions
+    cout << "Addition (function): " << addFunction(a, b) << endl;        // Output: 15
+    cout << "Subtraction (function): " << subtractFunction(a, b) << endl; // Output: 5
+
+    return 0;
+}
